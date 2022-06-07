@@ -1,13 +1,12 @@
-## Headhunter: Reprogrammable Headtracking Midi Controller
+# Headhunter: Reprogrammable Headtracking Midi Controller
 
-Final project for COMP_SCI 497 (RTVF 376-0-20): Digital Musical Instrument Design at Northwestern University
+##Final project for COMP_SCI 497 (RTVF 376-0-20): Digital Musical Instrument Design at Northwestern University
 
+Gefei Tan 
 ---
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 
 ---
