@@ -1,4 +1,6 @@
-## Portfolio
+## Headhunter: Reprogrammable Headtracking Midi Controller
+
+Final project for COMP_SCI 497 (RTVF 376-0-20): Digital Musical Instrument Design at Northwestern University
 
 ---
 
