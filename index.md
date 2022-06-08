@@ -17,9 +17,9 @@ Headhunter is a head tracking midi controller software system. It allows you to 
 My inspiration for Headhunter comes from Keith Jarrett, one of my favorite jazz pianists. (Yeah I know the name Headhunter might make you think of Herbie, but although Herbie's also one of my favorite Jazz musicians of all time, the name Headhunter is simply a dad joke material pun.)
 
 Besides his constant and notorious moaning, Mr. Jarrett also loves to make these dramatic head movements when playing live.
-<img src="media/keith1.jpg"/>
-<img src="media/keith2.jpg"/>
-<img src="media/keith3.jpg"/>
+![alt text](media/Keith1.gif)
+![alt text](media/Keith2.gif)
+![alt text](media/Keith3.gif)
 
 People found these movements to be really distracting because they have nothing to do with the music. Then I am thinking, what if these seemingly redundant movements could control some aspect of the sound? What if they become part of the musical performance? This way, the audience would no longer find these movements to be distracting but find them to be engaging because now they would receive auditory feedback when they see these movements. This would also give the keyboard player more degrees of freedom, and allows them to do things that are not possible before: bending notes while playing two-hand chords, and changing parameters without having to touch any knob or sliders.
 
@@ -62,7 +62,7 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 2. Follow <a href = https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking> this link </a> to setup and connect your smartphone to opentrack.
 3. Change the output protocol in opentrack to "Virtual Joystick".
 4. Create a new midi channel in loopMIDI.
-5. Download the Max patch [a relative link](media/headhunter_max_patch.zip) Set all the ctlout and bendout to the midi channel you created in step 5. Select "vjoy device" as your input, and click "poll 10" to start the Max patch.
+5. Download the Max patch and js files [here](media/headhunter_max_patch.zip). Set all the ctlout and bendout to the midi channel you created in step 5. Select "vjoy device" as your input, and click "poll 10" to start the Max patch.
 6. Set the channel you created in step 5 as the input of your VST. Or simply select "All" as your input.
 7. Start opentrack and your smartphone as you've done in step 2. You should be able to see numbers changing in your Max patch.
 8. Figure out your "zero position" and reset the tracking in opentrack.
