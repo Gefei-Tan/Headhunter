@@ -75,7 +75,7 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 ---
 ### Credit and Download
 
-[Download Headhunter Max Patch and Javascript Files](media/headhunter_max_patch.zip)
+[Download The Headhunter Max Patch and Javascript Files](media/headhunter_max_patch.zip)
 
 #### Software Used in the Project:
 
