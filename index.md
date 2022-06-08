@@ -72,11 +72,10 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 ---
 ### Credit
 #### Software Used in the Project
-OpenTrack (<a href = https://github.com/opentrack/opentrack> https://github.com/opentrack/opentrack </a>)
+OpenTrack (<a href = "https://github.com/opentrack/opentrack">https://github.com/opentrack/opentrack</a>)
 
-Max (<a href = https://cycling74.com/products/max> https://cycling74.com/products/max </a>)
+Max (<a href = "https://cycling74.com/products/max">https://cycling74.com/products/max</a>)
 
-Vjoy(<a href = https://sourceforge.net/projects/vjoystick/> https://sourceforge.net/projects/vjoystick/ </a>)
+Vjoy(<a href = "https://sourceforge.net/projects/vjoystick/">https://sourceforge.net/projects/vjoystick/</a>)
 
-loopMIDI (<a href = https://www.tobias-erichsen.de/software/loopmidi.html> https://www.tobias-erichsen.de/software/loopmidi.html </a>)
-
+loopMIDI (<a href = "https://www.tobias-erichsen.de/software/loopmidi.html">https://www.tobias-erichsen.de/software/loopmidi.html</a>)
