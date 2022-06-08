@@ -61,17 +61,20 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 ---
 ### How to Setup Headhunter
 #### The following method only works in Windows. The main problem with MacOS is that virtual joystick support on Mac is really complicated. It might require low-level actions like compiling drivers from source and installing kernel extensions. If you could find a way to make virtual joystick work, Headhunter could potentially work on MacOS. 
-1. Install opentrack, Max, Vjoy, and loopMIDI on your PC following the links provided in the credit section below.
+1. Install opentrack, Max, Vjoy, and loopMIDI on your PC following the links provided in the Credit and Download section below.
 2. Follow <a href = https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking> this link </a> to setup and connect your smartphone to opentrack. Make sure opentrack responds to your smartphone before proceeding to the next step.
 3. Change the output protocol in opentrack to "Virtual Joystick".
-4. Create a new midi channel in loopMIDI. This is fir connecting Max to your instrument.
+4. Create a new midi channel in loopMIDI. This is for connecting Max to your instrument.
 5. Download the Max patch and js files [here](media/headhunter_max_patch.zip). Set all the `ctlout` and `bendout` objects to the midi channel you created in step 5. Select `vjoy device` as your input, and click `poll 10` to start the Max patch.
 6. Set the channel you created in step 5 as the input of your VST. Or simply select "All" as your input.
 7. Start opentrack and your smartphone as you've done in step 2. You should be able to see numbers changing in your Max patch.
 8. Figure out your "zero position" and reset the tracking in opentrack.
 9. Now you can start to use Headhunter!
 ---
-### Credit
+### Credit and Download
+
+[Download Headhunter Max Patch and Javascript Files](media/headhunter_max_patch.zip)
+
 #### Software Used in the Project:
 
 [OpenTrack](https://github.com/opentrack/opentrack) 
