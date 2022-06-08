@@ -7,33 +7,49 @@
 
 ---
 
-### Introduction 
-Headhunter is a headtracking midi controller. It allows you to use your head to control your midi-compatible instrument. Headhunter uses sensors in your smartphone to do headtracking, and it translates these data to corresponding MIDI messages in Max. You can easily customize Headhunter by remapping head movements to different midi messages.   
+### Introduction
+Headhunter is a head tracking midi controller software system. It allows you to use your head to control your midi-compatible instrument. Headhunter uses sensors in your smartphone to do head tracking, and it translates these data to corresponding MIDI messages in Max. You can easily customize Headhunter by remapping head movements to different midi messages.
 
 
 ---
 
 ### Inspiration
+My inspiration for Headhunter comes from Keith Jarrett, one of my favorite jazz pianists. (Yeah I know the name Headhunter might make you think of Herbie, but although Herbie's also one of my favorite Jazz musicians of all time, the name Headhunter is simply a dad joke material pun.)
 
+Besides his constant and notorious moaning, Mr. Jarrett also loves to make these dramatic head movements when playing live.
+<img src="media/keith1.jpg"/>
+<img src="media/keith2.jpg"/>
+<img src="media/keith3.jpg"/>
 
+People found these movements to be really distracting because they have nothing to do with the music. Then I am thinking, what if these seemingly redundant movements could control some aspect of the sound? What if they become part of the musical performance? This way, the audience would no longer find these movements to be distracting but find them to be engaging because now they would receive auditory feedback when they see these movements. This would also give the keyboard player more degrees of freedom, and allows them to do things that are not possible before: bending notes while playing two-hand chords, and changing parameters without having to touch any knob or sliders.
 
 ---
 ### Process
+After my initial idea, my plan is to make a proof of concept first, and if it works, I will continue to commit to this idea and bring this instrument to life.
 
+First, I did some research on head tracking and found this open-source software called opentrack. It accepts a variety of head tracking input, which includes smartphones, so I (as well as other broke musicians who might be interested in this instrument) don't have to pay for a dedicated head tracking headset.
+
+Next, I tried to figure out how to convert the yaw-pitch-row data from opentrack into something max could recognize. After some research, I decided to use the built-in virtual joystick output protocol, which would encode the head tracking information to a virtual joystick. Then, Max could deal with the virtual joystick input.
+
+The final step is to figure out how to properly map three virtual joystick inputs to midi messages. These inputs are integers from 0-65535, and midi note bend messages and continuous control messages are all values from 0-127. A simple linear mapping wouldn't do because, first, it is really hard to move your head to reach both ends of an axis, and you also don't want the control to be too sensitive, or you will never be in tune. After lots of experiments, I wrote several dedicated javascript objects in Max to handle these rather complicated mapping rule sets.
 
 
 ---
 ### Future Work
 
+Currently, if one wants to change some parameters in the mapping rule sets, they have to edit the javascript code. In the future, I would like to make a slider or something that would make the parameter tuning process easier.
+
+Also, I think it would be great if all these separate software used can be made into a single executable file. This could be difficult but important because this would make Headhunter much more user-friendly and more like a product.
 
 
 ---
 ### Video Demo
 
-In this demo, I mapped the pitch bend to the yaw axis. So you will hear this vibrato/pitch bend effect when I shake my head.
-I also mapped the volume of my synth pad layer to the pitch axis, so you can hear the synth sound fading in and out as I look up and down.
+In this demo, I mapped the pitch bend to the yaw axis. So you will hear this vibrato/pitch bend effect when I turn my head left and right.
 
-Music in the demo is written by myself. If you like this kind of music, feel free to check out my <a href="https://open.spotify.com/playlist/62j0qdzoFFmlWArG9rjw5y?si=134dd3bfddf4407d">Spotify Playist</a> of songs I wrote!
+I also mapped the volume of a second synth pad layer to the pitch axis, so you can hear the synth sound fading in and out as I look up and down.
+
+The music in the demo is written by me. If you like this kind of music, feel free to check out my <a href="https://open.spotify.com/playlist/62j0qdzoFFmlWArG9rjw5y?si=134dd3bfddf4407d">Spotify Playist</a>!
 
 <iframe width="640" height="480"
 src="https://www.youtube.com/embed/a7rpF8U1QdA">
@@ -41,8 +57,16 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 
 ---
 ### Want to Try Headhunter Yourself?
-#### Headhunter is developed and tested on Windows operating system.
-
+#### WARNING: Headhunter is developed and tested on Windows operating system.
+1. Install opentrack, Max, Vjoy, and loopMIDI on your PC by following the links provided in the credit section below.
+2. Follow <a href = https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking> this link </a> to setup and connect your smartphone to opentrack.
+3. Change the output protocol in opentrack to "Virtual Joystick".
+4. Create a new midi channel in loopMIDI.
+5. Download the Max patch [a relative link](media/headhunter_max_patch.zip) Set all the ctlout and bendout to the midi channel you created in step 5. Select "vjoy device" as your input, and click "poll 10" to start the Max patch.
+6. Set the channel you created in step 5 as the input of your VST. Or simply select "All" as your input.
+7. Start opentrack and your smartphone as you've done in step 2. You should be able to see numbers changing in your Max patch.
+8. Figure out your "zero position" and reset the tracking in opentrack.
+9. Now you can start using Headhunter!
 ---
 ### Credit
 #### Software Used in the Project
@@ -51,4 +75,6 @@ OpenTrack (<a href = https://github.com/opentrack/opentrack> https://github.com/
 Max (<a href = https://cycling74.com/products/max> https://cycling74.com/products/max </a>)
 
 Vjoy(<a href = https://sourceforge.net/projects/vjoystick/> https://sourceforge.net/projects/vjoystick/ </a>)
+
+loopMIDI (<a href = https://www.tobias-erichsen.de/software/loopmidi.html> https://www.tobias-erichsen.de/software/loopmidi.html </a>)
 
