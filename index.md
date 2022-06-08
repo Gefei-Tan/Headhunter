@@ -1,16 +1,16 @@
-# Headhunter: Reprogrammable Headtracking Midi Controller
+# Headhunter: A Reprogrammable Head-tracking Midi Controller
 
 ---
 
 ## Gefei Tan
-<img src="media/email.jpg"/>
+![alt text](media/email.jpg)
 
 ---
 
 ### Introduction
-Headhunter is a head tracking midi controller. It allows you to use your head to control your midi-compatible instrument. 
+Headhunter is a head-tracking midi controller. It allows user to use their head to control a midi-compatible instrument. 
 
-Headhunter uses sensors in your smartphone to do head tracking, and it translates these data to corresponding MIDI messages in Max. You can easily customize Headhunter by remapping head movements to different midi messages.
+Headhunter uses sensors in smartphones to do head tracking. It translates these data to corresponding MIDI messages using Max. User can easily customize Headhunter by remapping head movements to different midi messages.
 
 
 ---
@@ -33,7 +33,7 @@ First, I did some research on head tracking and found this open-source software 
 
 Next, I tried to figure out how to convert the yaw-pitch-row data from opentrack into something max could recognize. After some research, I decided to use the built-in virtual joystick output protocol, which would encode the head tracking information to a virtual joystick. Then, Max could deal with the virtual joystick input.
 
-The final step is to figure out how to properly map three virtual joystick inputs to midi messages. These inputs are integers from 0-65535, and midi note bend messages and continuous control messages are all values from 0-127. A simple linear mapping wouldn't do because, first, it is really hard to move your head to reach both ends of an axis, and you also don't want the control to be too sensitive, or you will never be in tune. After lots of experiments, I wrote several dedicated javascript objects in Max to handle these rather complicated mapping rule sets.
+The final step is to figure out how to properly map three virtual joystick inputs to midi messages. These inputs are integers from 0-65535, and midi note bend messages and continuous control messages are all values from 0-127. A simple linear mapping wouldn't do because, first, it is really hard to move one's head to reach both ends of an axis, and if control to be too sensitive, it will be hard to stay in tune. These kind of problems require lots of trial-and-error parameter adjustment. After lots of experiments, I wrote several dedicated javascript objects in Max to handle these rather complicated mapping rule sets.
 
 
 ---
@@ -47,35 +47,39 @@ Also, I think it would be great if all these separate software used can be made 
 ---
 ### Video Demo
 
-In this demo, I mapped the pitch bend to the yaw axis. So you will hear this vibrato/pitch bend effect when I turn my head left and right.
+In this demo, I am playing a Rhodes and an ARP Solina string ensemble. The volume of the ARP Solina is set to 0 at the beginning. 
 
-I also mapped the volume of a second synth pad layer to the pitch axis, so you can hear the synth sound fading in and out as I look up and down.
+I mapped the yaw axis to the pitch bend. So you will hear this vibrato/out-of-tune effect when I turn my head left and right.
 
-The music in the demo is written by me. If you like this kind of music, feel free to check out my <a href="https://open.spotify.com/playlist/62j0qdzoFFmlWArG9rjw5y?si=134dd3bfddf4407d">Spotify Playist</a>!
+I mapped the pitch axis to the volume of the ARP Solina, so you can hear its sound fading in and out as I look up and down.
 
 <iframe width="640" height="480"
 src="https://www.youtube.com/embed/a7rpF8U1QdA">
 </iframe>
 
+###### Music written by [me](https://open.spotify.com/playlist/62j0qdzoFFmlWArG9rjw5y?si=134dd3bfddf4407d)
 ---
-### Want to Try Headhunter Yourself?
-#### WARNING: Headhunter is developed and tested on Windows operating system.
-1. Install opentrack, Max, Vjoy, and loopMIDI on your PC by following the links provided in the credit section below.
-2. Follow <a href = https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking> this link </a> to setup and connect your smartphone to opentrack.
+### How to Setup Headhunter
+#### The following method only works in Windows. The main problem with MacOS is that virtual joystick support on Mac is really complicated. It might require low-level actions like compiling drivers from source and installing kernel extensions. If you could find a way to make virtual joystick work, Headhunter could potentially work on MacOS. 
+1. Install opentrack, Max, Vjoy, and loopMIDI on your PC following the links provided in the credit section below.
+2. Follow <a href = https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking> this link </a> to setup and connect your smartphone to opentrack. Make sure opentrack responds to your smartphone before proceeding to the next step.
 3. Change the output protocol in opentrack to "Virtual Joystick".
-4. Create a new midi channel in loopMIDI.
-5. Download the Max patch and js files [here](media/headhunter_max_patch.zip). Set all the ctlout and bendout to the midi channel you created in step 5. Select "vjoy device" as your input, and click "poll 10" to start the Max patch.
+4. Create a new midi channel in loopMIDI. This is fir connecting Max to your instrument.
+5. Download the Max patch and js files [here](media/headhunter_max_patch.zip). Set all the `ctlout` and `bendout` objects to the midi channel you created in step 5. Select `vjoy device` as your input, and click `poll 10` to start the Max patch.
 6. Set the channel you created in step 5 as the input of your VST. Or simply select "All" as your input.
 7. Start opentrack and your smartphone as you've done in step 2. You should be able to see numbers changing in your Max patch.
 8. Figure out your "zero position" and reset the tracking in opentrack.
-9. Now you can start using Headhunter!
+9. Now you can start to use Headhunter!
 ---
 ### Credit
-#### Software Used in the Project
-OpenTrack (<a href = "https://github.com/opentrack/opentrack">https://github.com/opentrack/opentrack</a>)
+#### Software Used in the Project:
 
-Max (<a href = "https://cycling74.com/products/max">https://cycling74.com/products/max</a>)
+[OpenTrack](https://github.com/opentrack/opentrack) 
 
-Vjoy(<a href = "https://sourceforge.net/projects/vjoystick/">https://sourceforge.net/projects/vjoystick/</a>)
+[Max](https://cycling74.com/products/max</a>)
 
-loopMIDI (<a href = "https://www.tobias-erichsen.de/software/loopmidi.html">https://www.tobias-erichsen.de/software/loopmidi.html</a>)
+[Vjoy](https://sourceforge.net/projects/vjoystick/)
+
+[loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
+
+#### Keith Jarrett Gifs are from [Keith Jarrett solo concert - Tokyo, 1984](https://www.youtube.com/watch?v=KPgEoDt_Duc)
