@@ -8,20 +8,22 @@
 ---
 
 ### Introduction
-Headhunter is a head tracking midi controller software system. It allows you to use your head to control your midi-compatible instrument. Headhunter uses sensors in your smartphone to do head tracking, and it translates these data to corresponding MIDI messages in Max. You can easily customize Headhunter by remapping head movements to different midi messages.
+Headhunter is a head tracking midi controller. It allows you to use your head to control your midi-compatible instrument. 
+
+Headhunter uses sensors in your smartphone to do head tracking, and it translates these data to corresponding MIDI messages in Max. You can easily customize Headhunter by remapping head movements to different midi messages.
 
 
 ---
 
 ### Inspiration
-My inspiration for Headhunter comes from Keith Jarrett, one of my favorite jazz pianists. (Yeah I know the name Headhunter might make you think of Herbie, but although Herbie's also one of my favorite Jazz musicians of all time, the name Headhunter is simply a dad joke material pun.)
+My inspiration for Headhunter comes from Keith Jarrett, one of my favorite jazz pianists. (Yeah, I know the name Headhunter might imply Herbie, but the name Headhunter is simply a puntastic dad joke.)
 
-Besides his constant and notorious moaning, Mr. Jarrett also loves to make these dramatic head movements when playing live.
+Besides his constant and notorious moaning, Mr. Jarrett also loves to make these dramatic head movements when playing the piano.
 ![alt text](media/Keith1.gif)
-![alt text](media/Keith2.gif)
-![alt text](media/Keith3.gif)
+![alt text](media/keith2.gif)
+![alt text](media/keith3.gif)
 
-People found these movements to be really distracting because they have nothing to do with the music. Then I am thinking, what if these seemingly redundant movements could control some aspect of the sound? What if they become part of the musical performance? This way, the audience would no longer find these movements to be distracting but find them to be engaging because now they would receive auditory feedback when they see these movements. This would also give the keyboard player more degrees of freedom, and allows them to do things that are not possible before: bending notes while playing two-hand chords, and changing parameters without having to touch any knob or sliders.
+People found these movements to be really distracting because they have nothing to do with the music. This makes me think: what if these seemingly redundant movements could control some aspect of the sound? What if they become part of the musical performance? This way, the audience would no longer find these movements to be distracting but find them to be engaging because now they would receive auditory feedback when they see these movements. This would also give the keyboard player more degrees of freedom, and allows them to do things that are not possible before: bending notes while playing two-hand chords, and changing parameters without having to touch any knob or sliders.
 
 ---
 ### Process
