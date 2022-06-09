@@ -51,7 +51,7 @@ In this demo, I am playing a Rhodes and an ARP Solina string ensemble. The volum
 
 I mapped the yaw axis to the pitch bend. So you will hear this vibrato/out-of-tune effect when I turn my head left and right.
 
-I mapped the pitch axis to the volume of the ARP Solina, so you can hear its sound fading in and out as I look up and down.
+I mapped the pitch axis to the volume of the ARP Solina, so you can hear a synth string sound fading in and out as I look up and down.
 
 <iframe width="640" height="480"
 src="https://www.youtube.com/embed/a7rpF8U1QdA">
@@ -60,7 +60,7 @@ src="https://www.youtube.com/embed/a7rpF8U1QdA">
 ###### Music written by [me](https://open.spotify.com/playlist/62j0qdzoFFmlWArG9rjw5y?si=134dd3bfddf4407d)
 ---
 ### How to Setup Headhunter
-#### The following method only works in Windows. The main problem with MacOS is that virtual joystick support on Mac is really complicated. It might require low-level actions like compiling drivers from source and installing kernel extensions. If you could find a way to make virtual joystick work, Headhunter could potentially work on MacOS.
+#### The following method only works on Windows. The main problem with MacOS is that virtual joystick support on Mac is really complicated. It might require low-level actions like compiling drivers from source and installing kernel extensions. If you could find a way to make virtual joystick work, Headhunter could potentially work on MacOS.
 
 1. Install opentrack, Max, Vjoy, and loopMIDI on your PC following the links provided in the Credit and Download section below.
 2. Follow [this link](https://github.com/opentrack/opentrack/wiki/Smartphone-Headtracking) to setup and connect your smartphone to opentrack. Make sure opentrack responds to your smartphone before proceeding to the next step.
