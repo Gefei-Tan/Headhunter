@@ -33,16 +33,16 @@ First, I did some research on head tracking and found this open-source software 
 
 Next, I tried to figure out how to convert the yaw-pitch-row data from opentrack into something max could recognize. After some research, I decided to use the built-in virtual joystick output protocol, which would encode the head tracking information to a virtual joystick. Then, Max could deal with the virtual joystick input.
 
-The final step is to figure out how to properly map three virtual joystick inputs to midi messages. These inputs are integers from 0-65535, and midi note bend messages and continuous control messages are all values from 0-127. A simple linear mapping wouldn't do because, first, it is really hard to move one's head to reach both ends of an axis, and if control to be too sensitive, it will be hard to stay in tune. These kind of problems require lots of trial-and-error parameter adjustment. After lots of experiments, I wrote several dedicated javascript objects in Max to handle these rather complicated mapping rule sets.
-
+The final step is to figure out how to properly map three virtual joystick inputs to midi messages. These inputs are integers from 0-65535, and midi note bend messages and continuous control messages are all values from 0-127. A simple linear mapping wouldn't do because, first, it is really hard to move one's head to reach both value 0 and 65536; also, if tracking is too sensitive, it will be hard to stay in tune and accidental changes might occur. These kind of problems require lots of trial-and-error parameter adjustment. After lots of experiments, I wrote several dedicated javascript objects in Max to handle these rather complicated mapping rule sets. 
 
 ---
 ### Future Work
 
-Currently, if one wants to change some parameters in the mapping rule sets, they have to edit the javascript code. In the future, I would like to make a slider or something that would make the parameter tuning process easier.
+Currently, if one wants to change hyperparameters in the mapping rule sets, they have to understand and edit the javascript code. In the future, I would like to make sliders or knobs in the Max patch that change these hyperparameters directly. This would make the parameter tuning process easier.
 
-Also, I think it would be great if all these separate software used can be made into a single executable file. This could be difficult but important because this would make Headhunter much more user-friendly and more like a product.
+Also, I think it would be great if all these separate software used can be made into a single executable file. This could be difficult but important because this would make Headhunter much more user-friendly.
 
+Finally, I am thinking of replacing the smartphone with a dedicated orientation sensor. It would make the headset lighter while eliminating the need to set up app on the smartphone.
 
 ---
 ### Video Demo
